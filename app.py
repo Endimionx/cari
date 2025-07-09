@@ -34,7 +34,8 @@ angka_list = load_data(config['lokasi'], config['hari'], config['putaran'])
 df = None
 if angka_list:
     df = st.session_state['df'] = angka_list
-    st.dataframe({"Angka": angka_list}, use_container_width=True)
+    with st.expander("📄 Data Angka (Hasil dari API)"):
+        st.dataframe({"Angka": angka_list}, use_container_width=True)
 else:
     st.warning("⚠️ Data tidak tersedia.")
 
