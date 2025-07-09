@@ -1,7 +1,9 @@
 import streamlit as st
+from modules.lokasi_list import lokasi_list
+
 
 def configure_sidebar():
-    lokasi = st.selectbox("Lokasi", ["Jakarta", "Bandung", "Surabaya"])
+    lokasi = st.selectbox("Lokasi", lokasi_list)
     hari = st.selectbox("Hari", ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"])
     metode = st.selectbox("Metode Prediksi", ["Markov", "Markov Order-2", "LSTM AI", "Ensemble AI + Markov"])
 
