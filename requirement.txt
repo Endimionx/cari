@@ -1,7 +1,7 @@
 streamlit
 pandas
 numpy
-tensorflow==2.13.0
+tensorflow
 scikit-learn
 openai==0.28
 python-dotenv
